@@ -10,10 +10,10 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
   app.use(helmet());
   app.enableCors({
-    origin: ["http://localhost:5173"], //vue dev env
+    origin: ["http://localhost:5173"], // vue dev environment
   });
 
   await app.listen(PORT);
-  console.log(`Nestjs server running at: ${PORT}`)
+  console.log(`Nestjs server running at: http://localhost:${PORT}/`)
 }
 bootstrap();
